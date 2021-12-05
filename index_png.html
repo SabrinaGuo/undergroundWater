@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>首頁</title>
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="js/html5shiv.min.js" type="text/javascript"></script>
+    <!--<![endif]-->
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="key_visual_wrap">
+      <div class="all_build_wrap">
+        <div class="all_builds">
+          <div class="navigation">
+            <a class="nav1" href="javascript:;" onclick="clickNavHandler('.s_1')">
+              <p>制度面</p>
+            </a>
+            <a class="nav2" href="javascript:;" onclick="clickNavHandler('.s_2')">
+              <p>管理面</p>
+            </a>
+            <a class="nav3" href="javascript:;" onclick="clickNavHandler('.s_3')">
+              <p>技術面</p>
+            </a>
+            <a class="nav4" href="javascript:;" onclick="clickNavHandler('.s_4')">
+              <p>應用面</p>
+            </a>
+          </div>
+          <!-- 裝飾小元件 -->
+          <img class="tree tree1" src="./images/tree1.png" alt="" />
+          <img class="tree tree2" src="./images/tree2.png" alt="" />
+          <img class="road main_road" src="./images/road-main.png" alt="" />
+          <img class="road left_road" src="./images/road-left.png" alt="" />
+          <img class="road right_road" src="./images/road-right.png" alt="" />
+          <img class="car car_red" src="./images/car-red.png" alt="" />
+          <img class="car car_blue" src="./images/car-blue.png" alt="" />
+          <div class="windmill windmill1">
+            <img class="btm" src="./images/windmill-01-1.png" alt="" />
+            <img class="top" src="./images/windmill-01-2.png" alt="" />
+          </div>
+          <div class="windmill windmill2">
+            <img class="btm" src="./images/windmill-02-1.png" alt="" /><img class="top" src="./images/windmill-02-2.png"
+              alt="" />
+          </div>
+          <div class="windmill windmill3">
+            <img class="btm" src="./images/windmill-03-1.png" alt="" /><img class="top" src="./images/windmill-03-2.png"
+              alt="" />
+          </div>
+          <!-- 各面向 -->
+          <!-- 為同一面向的物件請給予同樣的className，例如: s_1、s_2... -->
+          <div class="sec section1 small">
+            <div class="sec1-4 board_box s_1">
+              <img src="./images/sec1-4.png" alt="" />
+              <img class="ani" src="./images/sec1-4-ani.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>法規研修</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec1-2 board_box s_1">
+              <img src="./images/sec1-2.png" alt="" />
+              <img class="ani" src="./images/sec1-2-ani.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>政策擘劃</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec1-3 board_box s_1">
+              <img src="./images/sec1-3.png" alt="" />
+              <img class="ani" src="./images/sec1-3-ani.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>交流培育</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec1-1 board_box s_1">
+              <img src="./images/sec1-1.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>基金運作</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+          </div>
+          <div class="sec section2 long">
+            <div class="sec2-3 board_box s_2">
+              <img src="./images/sec2-3.png" alt="" />
+              <img class="ani" src="./images/sec2-3-ani.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>衝擊調適</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec2-2 small_obj board_box s_2">
+              <img src="./images/sec2-2.png" alt="" />
+              <img class="ani" src="./images/sec2-2-ani.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>環境監測</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec2-1 small_obj board_box s_2">
+              <img src="./images/sec2-1.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>調查評估</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+          </div>
+          <div class="sec section3 small">
+            <div class="sec4-3 board_box s_4">
+              <img src="./images/sec4-3.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>資訊整合</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec3-4 board_box s_3">
+              <img src="./images/sec3-4.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>評估模擬工具</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec3-2 board_box s_3">
+              <img src="./images/sec3-2.png" alt="" />
+              <img class="ani" src="./images/sec3-2-ani.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>調查整治技術</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec3-1 board_box s_3">
+              <img src="./images/sec3-1.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>物聯網及<br />機器學習</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec3-3 board_box s_3">
+              <img src="./images/sec3-3.png" alt="" />
+              <img class="ani ani-2" src="./images/sec3-3-ani-2.png" alt="" />
+              <img class="ani" src="./images/sec3-3-ani-1.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>水文地質調查</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec4-4 board_box s_4">
+              <img src="./images/sec4-4.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>經濟工具</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+          </div>
+          <div class="sec section4 long">
+            <div class="sec4-1 board_box s_4">
+              <img src="./images/sec4-1.png" alt="" />
+              <img class="ani" src="./images/sec4-1-ani.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>水資源經營</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+            <div class="sec4-2 board_box s_4">
+              <img src="./images/sec4-2.png" alt="" />
+              <img class="ani ani-2" src="./images/sec4-2-ani-2.png" alt="" />
+              <img class="ani" src="./images/sec4-2-ani-1.png" alt="" />
+              <img class="ani ani-3" src="./images/sec4-2-ani-3.png" alt="" />
+              <img class="ani ani-4" src="./images/sec4-2-ani-4.png" alt="" />
+              <img class="ani ani-5" src="./images/sec4-2-ani-5.png" alt="" />
+              <a href="javascript:;" class="board">
+                <p>國土規劃利用</p>
+                <div class="tri"></div>
+              </a>
+            </div>
+          </div>
+          <!-- 資料顯示 -->
+          <div class="info_cover">
+            <div class="info_cntent_box">
+              <a href="javascript:;" class="closeBtn"><img src="./images/ic-close-btn.png" alt="" /></a>
+              <div class="infos">
+                <h2>政策擘劃</h2>
+                <ul>
+                  <li>
+                    <div class="title">政策白皮書擬定</div>
+                    <p>
+                      延續過去地下水保護政策，擬定地下水永續管理之願景、目標、策略、行動方案
+                      及權責分工等未來政策方向
+                    </p>
+                  </li>
+                  <li>
+                    <div class="title">短/中/長程工作藍圖擬定</div>
+                    <p>
+                      設定以5年為單位之地下水水質永續管理上之量化目標、進程規劃與分階段工作
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sea">
+        <figure></figure>
+        <img class="boat" src="./images/boat.png" alt="" />
+      </div>
+    </div>
+    <main>
+      <div class="main_content"></div>
+    </main>
+    <footer></footer>
+  </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/share.js"></script>
+<script></script>

@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import "_reset";
+@import "_mixin";
+
+html {
+  // 專門處理IOS旋轉問題
+  -webkit-text-size-adjust: 100%;
+  *,
+  *:before,
+  *:after {
+    font-size: 16px;
+    font-family: "Rubik", "Microsoft JhengHei", "Apple LiGothic Medium",
+      "PMingLiU", "sans-serif", "serif";
+  }
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+//===== PC版 =====
+
+//=== 手機板限定 ===
+@media (min-width: 0px) {
+  html,
+  body {
+    min-width: 320px;
+  }
+}
+//旋轉鎖定
+@media screen and (orientation: portrait) {
+  html {
+    /* Rotate the content container */
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    /* Set content width to viewport height */
+    width: 100vh;
+    /* Set content height to viewport width */
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    .key_visual_wrap {
+      width: 100%;
+      .all_build_wrap {
+        max-width: 100%;
+      }
+    }
+  }
+}

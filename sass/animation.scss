@@ -1,0 +1,356 @@
+.navigation,
+.board,
+.sea figure,
+.boat,
+.tree,
+.road,
+.car,
+.windmill,
+.ani,
+.section1 div,
+.section2 div,
+.section3 div,
+.section4 div {
+  opacity: 0;
+}
+// == 各區動畫時間 ===
+$greenBgAniTime: 0.8s;
+$seaAniTime: 0.8s;
+$seaAniTimeDelay: $greenBgAniTime; //0.8
+$roadAniTime: 0.8s;
+$roadAniTimeDelay: $seaAniTimeDelay + $seaAniTime; //0.8+0.8
+
+$delay1: 0s;
+$delay2: 0.2s;
+$delay3: 0.4s;
+$delay4: 0.6s;
+$delay5: 0.8s;
+$delay6: 1s;
+
+$section1AniTime: 1.2s;
+$section1AniTimeDelay: $roadAniTimeDelay + $roadAniTime; // 1.6+0.8
+
+$sec1Ani1: $section1AniTimeDelay + $delay1;
+$sec1Ani2: $section1AniTimeDelay + $delay2;
+$sec1Ani3: $section1AniTimeDelay + $delay3;
+$sec1Ani4: $section1AniTimeDelay + $delay4; //2.4+0.6 => 3+1.2 = 4.2
+
+$section2AniTime: 1.2s;
+$section2AniTimeDelay: $section1AniTimeDelay + $section1AniTime; //2.4+1.2 = 3.6
+$sec2Ani1: $section2AniTimeDelay + $delay1;
+$sec2Ani2: $section2AniTimeDelay + $delay2;
+$sec2Ani3: $section2AniTimeDelay + $delay3; //3.6+0.4 => 4+1.2 = 5.2
+
+$section3AniTime: 1.2s;
+$section3AniTimeDelay: $section1AniTimeDelay + $section1AniTime + 0.2s; //3.6+1.2 = 4.8
+// $section3AniTimeDelay: $section2AniTimeDelay + $section2AniTime; //3.6+1.2 = 4.8
+$sec3Ani1: $section3AniTimeDelay + $delay1;
+$sec3Ani2: $section3AniTimeDelay + $delay2;
+$sec3Ani3: $section3AniTimeDelay + $delay3;
+$sec3Ani4: $section3AniTimeDelay + $delay4;
+$sec3Ani5: $section3AniTimeDelay + $delay5;
+$sec3Ani6: $section3AniTimeDelay + $delay6; //4.8+1 => 5.8+1.2 = 7
+
+$section4AniTime: 1.2s;
+$section4AniTimeDelay: $roadAniTimeDelay + $roadAniTime + 0.4s; //4.8+1.2 = 6
+// $section4AniTimeDelay: $section3AniTimeDelay + $section3AniTime; //4.8+1.2 = 6
+$sec4Ani1: $section4AniTimeDelay + $delay1;
+$sec4Ani2: $section4AniTimeDelay + $delay2; //6+0.2=>6.2+1.2 = 7.4
+
+$sectionComplateTime: $section3AniTimeDelay + $section4AniTime + $delay4;
+// $sectionComplateTime: $section4AniTimeDelay + $section4AniTime; //6+1.2 = 7.2
+$boatAniTime: $sectionComplateTime;
+
+// ===============  動畫順序 ===============
+.key_visual_wrap {
+  &::before {
+    animation: bgShow $greenBgAniTime cubic-bezier(0.23, 0.35, 0.28, 0.91) 1
+      forwards;
+  }
+}
+.navigation {
+  transition: all 0.3s;
+  animation: scaleBig 0.3s cubic-bezier(0.49, 0.44, 0.2, 1.55)
+    $sectionComplateTime 1 forwards;
+}
+.sea {
+  figure {
+    animation: seaShow $seaAniTime cubic-bezier(0.23, 0.35, 0.28, 0.91)
+      $seaAniTimeDelay 1 forwards;
+  }
+}
+.road {
+  // opacity: 1;
+  &.main_road {
+    animation: fallDown $roadAniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $roadAniTimeDelay 1 forwards;
+  }
+  &.left_road {
+    animation: fallDown_left $roadAniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $roadAniTimeDelay 1 forwards;
+  }
+  &.right_road {
+    animation: fallDown_right $roadAniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $roadAniTimeDelay 1 forwards;
+  }
+}
+//區塊
+.section1 {
+  .sec1-2 {
+    animation: sec1 $section1AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec1Ani1 1 forwards;
+  }
+  .sec1-1 {
+    animation: sec1 $section1AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec1Ani2 1 forwards;
+  }
+  .sec1-3 {
+    animation: sec1 $section1AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec1Ani3 1 forwards;
+  }
+  .sec1-4 {
+    animation: sec1 $section1AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec1Ani4 1 forwards;
+  }
+}
+.section2 {
+  .sec2-3 {
+    animation: sec2 $section2AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec2Ani1 1 forwards;
+  }
+  .sec2-2 {
+    animation: sec2 $section2AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec2Ani3 1 forwards;
+  }
+  .sec2-1 {
+    animation: sec2 $section2AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec2Ani2 1 forwards;
+  }
+}
+.section3 {
+  .sec4-3 {
+    animation: sec3 $section3AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec3Ani1 1 forwards;
+  }
+  .sec3-2 {
+    animation: sec3 $section3AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec3Ani2 1 forwards;
+  }
+  .sec3-1 {
+    animation: sec3 $section3AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec3Ani3 1 forwards;
+  }
+  .sec4-4 {
+    animation: sec3 $section3AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec3Ani4 1 forwards;
+  }
+  .sec3-3 {
+    animation: sec3 $section3AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec3Ani5 1 forwards;
+  }
+  .sec3-4 {
+    animation: sec3 $section3AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec3Ani6 1 forwards;
+  }
+}
+.section4 {
+  .sec4-2 {
+    animation: sec4 $section3AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec4Ani1 1 forwards;
+  }
+  .sec4-1 {
+    animation: sec4 $section3AniTime cubic-bezier(0.1, 0.59, 0.05, 1.02)
+      $sec4Ani2 1 forwards;
+  }
+}
+//小物件
+.car {
+  &.car_red {
+    animation: carRed 10s linear $sectionComplateTime infinite;
+  }
+  &.car_blue {
+    animation: carBlue 18s linear $sectionComplateTime infinite;
+  }
+}
+.boat {
+  animation: boatAni 18s linear $sectionComplateTime infinite forwards;
+}
+.tree {
+  animation: scaleBig 0.5s cubic-bezier(0.49, 0.44, 0.2, 1.55)
+    $sectionComplateTime 1 forwards;
+}
+.board {
+  animation: scaleBig 0.3s cubic-bezier(0.49, 0.44, 0.2, 1.55)
+    $sectionComplateTime 1 forwards;
+}
+.windmill {
+  animation: scaleBig 0.3s cubic-bezier(0.49, 0.44, 0.2, 1.55)
+    $sectionComplateTime 1 forwards;
+}
+.ani {
+  animation: scaleBig 0.6s cubic-bezier(0.28, 0.27, 0.62, 1.41)
+    $sectionComplateTime 1 forwards;
+}
+// ===============  動畫設定 ===============
+.scaleBig {
+  animation: scaleBig 0.8s cubic-bezier(0.23, 0.35, 0.28, 0.91) 1 forwards;
+}
+//綠色草地出場 greenBgAniTime
+@keyframes bgShow {
+  from {
+    top: 0;
+  }
+  to {
+    top: -101%;
+  }
+}
+//海洋出場 seaAniTime
+@keyframes seaShow {
+  0% {
+    transform: translate(-40px, 40px) skew(23deg, 0deg) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) skew(0deg, 0deg) scale(1);
+  }
+}
+//動動船
+@keyframes boatAni {
+  0% {
+    opacity: 1;
+    top: 40%;
+    left: 0;
+    transform: rotate(-14deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-8deg);
+    top: calc(100% + 100px);
+    left: calc(100% + 40px);
+  }
+}
+//縮小放大
+@keyframes scaleBig {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+//car
+@keyframes carRed {
+  0% {
+    transform: translate(-496%, -397%);
+  }
+  1% {
+    opacity: 1;
+    transform: translate(-496%, -397%);
+  }
+  36% {
+    z-index: 2;
+  }
+  50% {
+    z-index: 5;
+  }
+  99% {
+    opacity: 1;
+    transform: translate(992%, 787%);
+  }
+  100% {
+    z-index: 5;
+    transform: translate(992%, 787%);
+    // transform: translate(1090%, 871%);
+  }
+}
+@keyframes carBlue {
+  0% {
+    opacity: 1;
+    transform: translate(554%, -486%);
+  }
+  1% {
+    transform: translate(554%, -486%);
+  }
+  99% {
+    opacity: 1;
+    transform: translate(-798%, 713%);
+  }
+  100% {
+    transform: translate(-798%, 713%);
+    // transform: translate(-871%, 806%);
+  }
+}
+//道路降落
+@keyframes fallDown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes fallDown_left {
+  0% {
+    opacity: 1;
+    transform: translate(5%, -200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes fallDown_right {
+  0% {
+    opacity: 1;
+    transform: translate(5%, -200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes sec1 {
+  0% {
+    opacity: 1;
+    transform: translate(-150%, -138%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes sec2 {
+  0% {
+    opacity: 1;
+    transform: translate(170%, -30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes sec3 {
+  0% {
+    opacity: 1;
+    transform: translate(-208%, -182%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes sec4 {
+  0% {
+    opacity: 1;
+    transform: translate(150%, -134%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
