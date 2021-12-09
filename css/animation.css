@@ -1,25 +1,29 @@
-.navigation,
-.board,
-.sea figure,
-.boat,
-.tree,
-.road,
-.car,
-.windmill,
-.ani,
-.section1 div,
-.section2 div,
-.section3 div,
-.section4 div {
+.animationStart .navigation,
+.animationStart .board,
+.animationStart .sea figure,
+.animationStart .boat,
+.animationStart .tree,
+.animationStart .road,
+.animationStart .car,
+.animationStart .windmill,
+.animationStart .ani,
+.animationStart .section1 > div,
+.animationStart .section2 > div,
+.animationStart .section3 > div,
+.animationStart .section4 > div {
   opacity: 0;
 }
 
-.key_visual_wrap::before {
+.animationStart .key_visual_wrap::before {
+  content: "";
+}
+
+.animationStart .key_visual_wrap::before {
   -webkit-animation: bgShow 0.8s cubic-bezier(0.23, 0.35, 0.28, 0.91) 1 forwards;
           animation: bgShow 0.8s cubic-bezier(0.23, 0.35, 0.28, 0.91) 1 forwards;
 }
 
-.navigation {
+.animationStart .navigation {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -27,134 +31,144 @@
           animation: scaleBig 0.3s cubic-bezier(0.49, 0.44, 0.2, 1.55) 5.6s 1 forwards;
 }
 
-.sea figure {
+.animationStart .sea figure {
   -webkit-animation: seaShow 0.8s cubic-bezier(0.23, 0.35, 0.28, 0.91) 0.8s 1 forwards;
           animation: seaShow 0.8s cubic-bezier(0.23, 0.35, 0.28, 0.91) 0.8s 1 forwards;
 }
 
-.road.main_road {
+.animationStart .road.main_road {
   -webkit-animation: fallDown 0.8s cubic-bezier(0.1, 0.59, 0.05, 1.02) 1.6s 1 forwards;
           animation: fallDown 0.8s cubic-bezier(0.1, 0.59, 0.05, 1.02) 1.6s 1 forwards;
 }
 
-.road.left_road {
+.animationStart .road.left_road {
   -webkit-animation: fallDown_left 0.8s cubic-bezier(0.1, 0.59, 0.05, 1.02) 1.6s 1 forwards;
           animation: fallDown_left 0.8s cubic-bezier(0.1, 0.59, 0.05, 1.02) 1.6s 1 forwards;
 }
 
-.road.right_road {
+.animationStart .road.right_road {
   -webkit-animation: fallDown_right 0.8s cubic-bezier(0.1, 0.59, 0.05, 1.02) 1.6s 1 forwards;
           animation: fallDown_right 0.8s cubic-bezier(0.1, 0.59, 0.05, 1.02) 1.6s 1 forwards;
 }
 
-.section1 .sec1-2 {
+.animationStart .section1 .sec1-2 {
   -webkit-animation: sec1 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 2.4s 1 forwards;
           animation: sec1 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 2.4s 1 forwards;
 }
 
-.section1 .sec1-1 {
+.animationStart .section1 .sec1-1 {
   -webkit-animation: sec1 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 2.6s 1 forwards;
           animation: sec1 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 2.6s 1 forwards;
 }
 
-.section1 .sec1-3 {
+.animationStart .section1 .sec1-3 {
   -webkit-animation: sec1 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 2.8s 1 forwards;
           animation: sec1 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 2.8s 1 forwards;
 }
 
-.section1 .sec1-4 {
+.animationStart .section1 .sec1-4 {
   -webkit-animation: sec1 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3s 1 forwards;
           animation: sec1 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3s 1 forwards;
 }
 
-.section2 .sec2-3 {
+.animationStart .section2 .sec2-3 {
   -webkit-animation: sec2 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3.6s 1 forwards;
           animation: sec2 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3.6s 1 forwards;
 }
 
-.section2 .sec2-2 {
+.animationStart .section2 .sec2-2 {
   -webkit-animation: sec2 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4s 1 forwards;
           animation: sec2 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4s 1 forwards;
 }
 
-.section2 .sec2-1 {
+.animationStart .section2 .sec2-1 {
   -webkit-animation: sec2 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3.8s 1 forwards;
           animation: sec2 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3.8s 1 forwards;
 }
 
-.section3 .sec4-3 {
+.animationStart .section3 .sec4-3 {
   -webkit-animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3.8s 1 forwards;
           animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3.8s 1 forwards;
 }
 
-.section3 .sec3-2 {
+.animationStart .section3 .sec3-2 {
   -webkit-animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4s 1 forwards;
           animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4s 1 forwards;
 }
 
-.section3 .sec3-1 {
+.animationStart .section3 .sec3-1 {
   -webkit-animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4.2s 1 forwards;
           animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4.2s 1 forwards;
 }
 
-.section3 .sec4-4 {
+.animationStart .section3 .sec4-4 {
   -webkit-animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4.4s 1 forwards;
           animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4.4s 1 forwards;
 }
 
-.section3 .sec3-3 {
+.animationStart .section3 .sec3-3 {
   -webkit-animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4.6s 1 forwards;
           animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4.6s 1 forwards;
 }
 
-.section3 .sec3-4 {
+.animationStart .section3 .sec3-4 {
   -webkit-animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4.8s 1 forwards;
           animation: sec3 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 4.8s 1 forwards;
 }
 
-.section4 .sec4-2 {
+.animationStart .section4 .sec4-2 {
   -webkit-animation: sec4 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 2.8s 1 forwards;
           animation: sec4 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 2.8s 1 forwards;
 }
 
-.section4 .sec4-1 {
+.animationStart .section4 .sec4-1 {
   -webkit-animation: sec4 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3s 1 forwards;
           animation: sec4 1.2s cubic-bezier(0.1, 0.59, 0.05, 1.02) 3s 1 forwards;
 }
 
-.car.car_red {
-  -webkit-animation: carRed 10s linear 5.6s infinite;
-          animation: carRed 10s linear 5.6s infinite;
+.animationStart .boat {
+  -webkit-animation: boatAni 53s linear 5.6s infinite forwards;
+          animation: boatAni 53s linear 5.6s infinite forwards;
 }
 
-.car.car_blue {
-  -webkit-animation: carBlue 18s linear 5.6s infinite;
-          animation: carBlue 18s linear 5.6s infinite;
-}
-
-.boat {
-  -webkit-animation: boatAni 18s linear 5.6s infinite forwards;
-          animation: boatAni 18s linear 5.6s infinite forwards;
-}
-
-.tree {
+.animationStart .tree {
   -webkit-animation: scaleBig 0.5s cubic-bezier(0.49, 0.44, 0.2, 1.55) 5.6s 1 forwards;
           animation: scaleBig 0.5s cubic-bezier(0.49, 0.44, 0.2, 1.55) 5.6s 1 forwards;
 }
 
-.board {
+.animationStart .board {
   -webkit-animation: scaleBig 0.3s cubic-bezier(0.49, 0.44, 0.2, 1.55) 5.6s 1 forwards;
           animation: scaleBig 0.3s cubic-bezier(0.49, 0.44, 0.2, 1.55) 5.6s 1 forwards;
 }
 
-.windmill {
+.animationStart .windmill {
   -webkit-animation: scaleBig 0.3s cubic-bezier(0.49, 0.44, 0.2, 1.55) 5.6s 1 forwards;
           animation: scaleBig 0.3s cubic-bezier(0.49, 0.44, 0.2, 1.55) 5.6s 1 forwards;
 }
 
-.ani {
+.animationStart .ani {
   -webkit-animation: scaleBig 0.6s cubic-bezier(0.28, 0.27, 0.62, 1.41) 5.6s 1 forwards;
           animation: scaleBig 0.6s cubic-bezier(0.28, 0.27, 0.62, 1.41) 5.6s 1 forwards;
+}
+
+.car.car_red {
+  -webkit-animation: carRed 16s linear 5.6s infinite;
+          animation: carRed 16s linear 5.6s infinite;
+}
+
+.car.car_blue {
+  -webkit-animation: carBlue 22s linear 5.6s infinite;
+          animation: carBlue 22s linear 5.6s infinite;
+}
+
+.boat {
+  -webkit-animation: boatAni 38s linear 5.6s infinite forwards;
+          animation: boatAni 38s linear 5.6s infinite forwards;
+}
+
+.windmill .top {
+  -webkit-animation: rotateWind 5s linear 5.6s infinite forwards;
+          animation: rotateWind 5s linear 5.6s infinite forwards;
 }
 
 .scaleBig {
@@ -209,34 +223,54 @@
 @-webkit-keyframes boatAni {
   0% {
     opacity: 1;
-    top: 40%;
-    left: 0;
-    -webkit-transform: rotate(-14deg);
-            transform: rotate(-14deg);
+    left: -8%;
+    top: 20%;
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  44% {
+    top: 80%;
+    left: 42%;
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  74% {
+    -webkit-transform: rotate(-24deg);
+            transform: rotate(-24deg);
   }
   100% {
     opacity: 1;
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
-    top: calc(100% + 100px);
-    left: calc(100% + 40px);
+    -webkit-transform: rotate(-24deg);
+            transform: rotate(-24deg);
+    top: 90%;
+    left: 100%;
   }
 }
 
 @keyframes boatAni {
   0% {
     opacity: 1;
-    top: 40%;
-    left: 0;
-    -webkit-transform: rotate(-14deg);
-            transform: rotate(-14deg);
+    left: -8%;
+    top: 20%;
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  44% {
+    top: 80%;
+    left: 42%;
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  74% {
+    -webkit-transform: rotate(-24deg);
+            transform: rotate(-24deg);
   }
   100% {
     opacity: 1;
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
-    top: calc(100% + 100px);
-    left: calc(100% + 40px);
+    -webkit-transform: rotate(-24deg);
+            transform: rotate(-24deg);
+    top: 90%;
+    left: 100%;
   }
 }
 
@@ -263,6 +297,28 @@
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@-webkit-keyframes rotateWind {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+            transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+@keyframes rotateWind {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+            transform: rotate3d(0, 0, 1, 360deg);
   }
 }
 

@@ -18,6 +18,9 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  &.lbShow {
+    overflow: hidden;
+  }
 }
 * {
   box-sizing: border-box;

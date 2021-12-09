@@ -10,7 +10,7 @@
   background: url("../images/greenground.jpg") center no-repeat;
   background-size: cover;
   &::before {
-    content: "";
+    content: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -142,7 +142,7 @@
     box-shadow: 0px 3px 0px #d7dad0;
   }
   .tri {
-    opacity: 1;
+    // opacity: 1;
     position: relative;
     top: 0;
     left: 50%;
@@ -223,10 +223,12 @@
 .boat {
   // opacity: 0; //一開始隱藏
   position: absolute;
-  top: 40%;
-  left: 0;
-  z-index: 1;
-  transform: rotate(-28deg);
+  // top: 70%;
+  left: -8%;
+  top: 20%;
+  // left: -12%;
+  z-index: 6;
+  transform: rotate(-2deg);
   max-width: 8.75%; //175
   width: 100%;
 }

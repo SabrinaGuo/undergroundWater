@@ -68,7 +68,7 @@ img {
 }
 
 .key_visual_wrap::before {
-  content: "";
+  content: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -233,7 +233,6 @@ img {
 }
 
 .board .tri {
-  opacity: 1;
   position: relative;
   top: 0;
   left: 50%;
@@ -322,12 +321,12 @@ img {
 
 .boat {
   position: absolute;
-  top: 40%;
-  left: 0;
-  z-index: 1;
-  -webkit-transform: rotate(-28deg);
-      -ms-transform: rotate(-28deg);
-          transform: rotate(-28deg);
+  left: -8%;
+  top: 20%;
+  z-index: 6;
+  -webkit-transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+          transform: rotate(-2deg);
   max-width: 8.75%;
   width: 100%;
 }
