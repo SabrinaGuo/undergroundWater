@@ -1,11 +1,19 @@
+//動畫開始 ======================================
+// $(document).ready(function () {
+//   $("body").addClass("animationStart");
+// });
 //關閉動畫 ======================================
 function stopAni() {
   setTimeout(function () {
+    // $(".board_box").css({
+    //   animation: "none",
+    //   opacity: "1",
+    // });
     $("body").removeClass("animationStart");
   }, 7000);
 }
 stopAni();
-//資料 ======================================
+//資料載入 ======================================
 var data = [
   {
     section: "1-1",
@@ -317,7 +325,38 @@ var data = [
     ],
   },
 ];
+console.log(data);
 //資料載入 ======================================
+function fetchAll(openItem) {
+  fetch("./../data.json", {})
+    .then((response) => {
+      // 這裡會得到一個 ReadableStream 的物件
+      // console.log(response);
+      // 可以透過 blob(), json(), text() 轉成可用的資訊
+      return response.json();
+    })
+    .then((jsonData) => {
+      jsonData.forEach((element) => {
+        if (element.section == openItem) {
+          $(".optionLists").empty();
+
+          $(".itmeName").text(element.itemname);
+          for (var i = 0; i < element.num; i++) {
+            $(".optionLists").append(
+              '<li><div class="title">' +
+                element.des[i].option +
+                "</div><p>" +
+                element.des[i].describe +
+                "</p></li>"
+            );
+          }
+        }
+      });
+    })
+    .catch((err) => {
+      console.log("錯誤:", err);
+    });
+}
 function dataFetch(openItem) {
   data.forEach((element) => {
     if (element.section == openItem) {
@@ -339,6 +378,7 @@ function dataFetch(openItem) {
 //資料帶入燈箱 ================================
 function lbOpen(clickBoard) {
   var openItem = clickBoard;
+  // fetchAll(openItem);
   dataFetch(openItem);
   $(".info_cover").addClass("show");
   $("html").addClass("lbShow");
@@ -347,6 +387,7 @@ function lbClose() {
   $(".info_cover").removeClass("show");
   $("html").removeClass("lbShow");
 }
+
 //開燈箱 ======================================
 $(".board").click(function () {
   clickBoard = $(this).data("no");
