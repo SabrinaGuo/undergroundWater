@@ -2,7 +2,7 @@
 function stopAni() {
   setTimeout(function () {
     $("body").removeClass("animationStart");
-  }, 6300);
+  }, 7000);
 }
 stopAni();
 //資料 ======================================
@@ -356,8 +356,9 @@ $(".closeBtn").click(function () {
   lbClose();
 });
 //白標滑鼠移入與移出 底下物件會上升 ===================
-$(".board")
+$(".board p")
   .mouseenter(function (e) {
+    console.log("ddddd");
     $(this).parents(".board_box").addClass("up");
   })
   .mouseleave(function () {

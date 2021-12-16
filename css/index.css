@@ -230,6 +230,17 @@ img {
   letter-spacing: 0;
   -webkit-box-shadow: 0px 3px 0px #d7dad0;
           box-shadow: 0px 3px 0px #d7dad0;
+  position: relative;
+}
+
+.board p::after {
+  position: absolute;
+  width: calc(100% + 10px);
+  height: 118%;
+  background-color: indianred;
+  opacity: 0.5;
+  top: 0;
+  left: -5px;
 }
 
 .board .tri {
@@ -265,6 +276,18 @@ img {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.board::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 10px);
+  height: 122%;
+  background-color: transparent;
+  opacity: 0;
+  top: 0;
+  left: -5px;
+  z-index: -1;
 }
 
 @media screen and (min-width: 1200px) {
@@ -441,7 +464,16 @@ img {
 
 .sec > div {
   position: absolute;
+  z-index: 0;
   width: 100%;
+}
+
+.sec > div > img {
+  pointer-events: none;
+}
+
+.sec > div .ani {
+  pointer-events: none;
 }
 
 .sec .ani {
